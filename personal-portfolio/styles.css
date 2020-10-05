@@ -1,0 +1,87 @@
+Body {
+    background-color: #1e2842;
+    margin: 20px;
+    font-family: sans-serif;
+  }
+  header {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  .header-pic {
+    height: 90px;
+  }
+  .profile-pic {
+    height: 195px;
+  }
+  main {
+    width: 960px;
+    margin: 0 auto;
+  }
+  #info,
+  #tech {
+    display: flex;
+  }
+  .bio {
+    width: 100%;
+    margin-left: 12px;
+  }
+  #choose-list {
+    background-color: #545353;
+    padding: 12px;
+  }
+  #name-date,
+  h2,
+  time {
+    background-color: #1e2842;
+    display: flex;
+    font: 1.5em sans-serif;
+    justify-content: space-between;
+    padding: 8px;
+    margin: 0;
+  }
+  h2 {
+    color: #cdeffe;
+  }
+  time {
+    color: #fff;
+  }
+  h4 {
+    color: #cdeffe;
+    font: "Fira Sans", sans-serif;
+    margin: 0;
+  }
+  
+  div {
+    background-color: #545353;
+  }
+  ul {
+    margin: 0;
+    padding-left: 15px;
+    color: #ccc;
+  }
+  
+  figure > img {
+    max-height: 180px;
+    max-width: 180px;
+  }
+  figcaption {
+    background-color: rgba(10, 10, 10, 0.5);
+    color: #ccc;
+    max-width: 180px;
+    text-align: center;
+    position: relative;
+    top: -20px;
+  }
+  .excited {
+    background-color: #545353;
+    margin-top: 20px;
+  }
+  .excited p {
+    color: #ccc;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+  
