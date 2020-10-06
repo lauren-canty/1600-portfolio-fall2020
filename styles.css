@@ -66,6 +66,7 @@ li{
     text-align: center;
   padding: 10rem 2rem;
   background: #45567d;
+  
 }
 .project {
     background:grey;
@@ -82,11 +83,12 @@ li{
     margin-bottom:6rem;
 
   }
-/*.project-image{
+.project-image{
     height: calc(100% - 6.8rem);
   width: 100%;
     object-fit:cover;
-}*/
+    height: 100%;
+}
 a {
     text-decoration: none;
     color:  #f0f0f0;
