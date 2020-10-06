@@ -55,7 +55,12 @@ li{
     font-style: italic;
     color: antiquewhite;
 }
-  
+  h1,h2{
+    font-size:3rem;
+    font-weight: 150;
+    
+      color: antiquewhite;
+  }
 
 .projects-section{
     text-align: center;
@@ -131,4 +136,30 @@ a {
     .contact-links {
       flex-direction: column;
       text-align: center;
-    }
+    } }
+
+
+    footer {
+        font-weight: 300;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2rem;
+        background: brown;
+        border-top: 4px solid antiquewhite;
+      }
+      
+      footer > p {
+        margin: 2rem;
+      }
+      
+      footer i {
+        vertical-align: middle;
+      }
+      
+      @media (max-width: 28.75em) {
+        footer {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+      
