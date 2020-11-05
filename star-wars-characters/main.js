@@ -2,7 +2,7 @@ import { people } from '../data/people.js'
 
 const mainHeader = document.createElement('header')
 mainHeader.className = 'mainHeader'
-document.body.insertBefore(mainHeader,mainContent)
+document.body.insertBefore(mainHeader.mainContent)
 
 const maleButton = document.createElement('button')
 maleButton.textContent = 'Male Characters'
@@ -18,7 +18,6 @@ mainHeader.appendChild(otherButton)
 
 const maleCharacters = people.filter
 console.log(maleCharacters)
-
 
 maleButton.addEventListener('click', event => { 
  maleCharacters.forEach(element) => {
