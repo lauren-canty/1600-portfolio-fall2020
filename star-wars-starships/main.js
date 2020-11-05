@@ -25,5 +25,5 @@ function populateNav (starships) {
 
 function populateShipView(shipData) {
     console,log(shipData)
-
+    
 }

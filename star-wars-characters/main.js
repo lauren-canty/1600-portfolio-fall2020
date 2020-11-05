@@ -20,7 +20,7 @@ const maleCharacters = people.filter
 console.log(maleCharacters)
 
 maleButton.addEventListener('click', event => { 
- maleCharacters.forEach(element) => {
+ maleCharacters.forEach(element); {
     const charFigure = document.createElement('figure')
     const charImg = document.createElement('img')
     charImg.src = '`https://starwars-visualguide.com/assets/img/characters/10.jpg'
