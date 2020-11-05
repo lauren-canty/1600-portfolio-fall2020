@@ -5,7 +5,7 @@ const navList = document.querySelector('.navList')
 const sihpView = document.querySelector('.main')
 
 function populateNav (starships) {
-    starships..forEach(starships=> {
+    starships.forEach(starships=> {
         let anchorWrap = document.createElement('a')
         anchorWrap.href = '#'
         anchorWrap.addEventListener('click', event => {
@@ -25,5 +25,5 @@ function populateNav (starships) {
 
 function populateShipView(shipData) {
     console,log(shipData)
-    
+
 }
