@@ -1,5 +1,5 @@
 import { people } from '../data/people.js'
-
+import {removeChildren } from '../utils/index.js'
 const mainHeader = document.createElement('header')
 mainHeader.className = 'mainHeader'
 document.body.insertBefore(mainHeader.mainContent)

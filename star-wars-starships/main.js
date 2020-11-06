@@ -24,6 +24,15 @@ function populateNav (starships) {
 }
 
 function populateShipView(shipData) {
-    console,log(shipData)
+   removeChildren (shipView)
+    let shipImage = document.createElement('img')
+    shipNum = getLastNumber(shipData.url)
+    shipImage.src = 'https://starwars-visualguide.com/assets/img/starships/15.jpg'
     
+    shipView.appendChild(shipImage)
+
 }
+
+populateNav(starships)
+
+
