@@ -3,6 +3,14 @@
     box-sizing: border-box;
 
 }
+.container{
+    display:flex;
+
+}
+.main {
+    margin: 5rem 5rem 0 10rem;
+
+}
 
 header,footer {
     display:flex;
@@ -19,13 +27,4 @@ a {
 li {
     list-style-type: none;
 
-}
-.container{
-    display:flex;
-
-}
-
-.main {
-    margin: 20 rem;
-    width: ;
 }
