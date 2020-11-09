@@ -19,7 +19,7 @@ modalBackground.addEventListener('click',() =>{
 })
 
 function populateNav (starships) {
-    starships.forEach(starships=> {
+    starships.forEach(starship=> {
         let anchorWrap = document.createElement('a')
         anchorWrap.href = '#'
         anchorWrap.addEventListener('click', event => {
@@ -29,7 +29,7 @@ function populateNav (starships) {
         })
 
         let listItem = document.createElement('li')
-        listItem.textContent = starships.name
+        listItem.textContent = starship.name
     
         anchorWrap.appendChild(listItem)
         navList.appendChild(anchorWrap)
@@ -40,7 +40,7 @@ function populateNav (starships) {
 function populateShipView(shipData) {
    removeChildren (shipView)
     let shipImage = document.createElement('img')
-    shipNum = getLastNumber(shipData.url)
+    let shipNum = getLastNumber(shipData.url)
     shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
     shipImage.addEventListener('error',() => {
         shipImage.hidden=true
