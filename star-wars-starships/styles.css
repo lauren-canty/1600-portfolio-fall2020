@@ -1,11 +1,19 @@
 :root {
     margin: 0;
     box-sizing: border-box;
+}
+
+.starshipsimg{
+    size: 50%;
+
+    background-position: top;
 
 }
 .container{
-    display:flex;
-
+    justify-content: left;
+    column-count: 2;
+    column-gap:0px;
+    column-rule: 4px dotted cornflowerblue;
 }
 .main {
     margin: 5rem 5rem 0 10rem;
@@ -19,6 +27,9 @@ header,footer {
     
 }
 
+
+
+
 a {
     text-decoration: none;
     font-size: 1.5rem;
@@ -27,7 +38,7 @@ a {
 li {
     list-style-type: none;
     border:solid 1px blueviolet;
-    margin: 1rem;
+    margin:1rem;
     padding: 1rem;
     display: flex;
     justify-content: center;
@@ -42,5 +53,9 @@ h1{
     text-align: center;
     font-weight: 500;
     color: blueviolet;
+    margin: 2rem;
+    padding: 1rem;
 
 }
+
+
