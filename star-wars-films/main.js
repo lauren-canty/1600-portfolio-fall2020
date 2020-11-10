@@ -7,11 +7,18 @@ const main = document.querySelector('main')
 
 for(let step = 0; step<7; step++) {
     let figure = document.createElement('figure')
-    let newImg = document.createElement('img')
-    newImg.src = `https://starwars-visualguide.com/assets/img/films/${step + 1}.jpg`
+    let figImg = document.createElement('img')
+    figImg.src = `https://starwars-visualguide.com/assets/img/films/${step + 1}.jpg`
+    let figCaption = document.createElement('figcaption')
+    figCaption.textContent = films[step].title
     
-    main.appendChild(newImg)
-    console.log(films[step].title);
+    
+    
+    figure.appendChild(figImg)
+    figure.appendChild(figCaption)
+    
+    
+    main.appendChild(figure)
 }
     
 

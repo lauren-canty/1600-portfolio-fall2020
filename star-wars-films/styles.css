@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/galaxy-bg.jpg);
+
+
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+figure{
+    margin: 1rem;
+    border: solid 8px black;
+    
+}
+
+figcaption{
+    text-align: center;
+    background-color: black;
+    color: blueviolet;
+    font-size: large;
+}
+h1{
+    font-size: 56px;
+    border: 10px solid black;
+    text-align: center;
+    color: blueviolet;
+    text-shadow:4px 6px black;
+
+}
