@@ -12,7 +12,7 @@ async function getAPIData(url) {
 
 // now, use the async get SPIData function
 function loadPage() {
-    getAPIData (`https://pokeapi.co/api/v2/pokemon/1`).then
+    getAPIData (`https://pokeapi.co/api/v2/pokemon`).then
         (async (data) => {
         for (const pokemon of data.results) {
             await getAPIData(pokemon.url).then((pokeData)=>{
@@ -23,10 +23,13 @@ function loadPage() {
     })
 }
 
-///const pokemonGrid = document.querySelector()
+const pokemonGrid = document.querySelector('.pokemonGrid')
+const mudsDaleButton = document.querySelector('button')
+///mudsDaleButton.addEventListener('click', () => {
+   /// getAPIData(`https://pokeapi.co/api/v2/pokemon`)
+///})
 
-
-let pokemonGrid = document.querySelector('.pokemonGrid')
+///let pokemonGrid = document.querySelector('.pokemonGrid')
 
 function populatePokeCard(pokemon){
     let pokeScene = document.createElement('div')
