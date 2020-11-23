@@ -23,7 +23,7 @@ function loadPage() {
     })
 }
 
-const pokemonGrid = document.querySelector()
+///const pokemonGrid = document.querySelector()
 
 
 let pokemonGrid = document.querySelector('.pokemonGrid')
