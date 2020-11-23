@@ -26,7 +26,7 @@ function loadPage() {
 const pokemonGrid = document.querySelector()
 
 
-let polemonGrid = document.querySelector('.pokemonGrid')
+let pokemonGrid = document.querySelector('.pokemonGrid')
 
 function populatePokeCard(pokemon){
     let pokeScene = document.createElement('div')
