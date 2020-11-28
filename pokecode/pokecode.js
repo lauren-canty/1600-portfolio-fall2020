@@ -77,4 +77,4 @@ function getImageFileName(pokemon){
         return `0${pokemon.id}`
     }
 }
-//loadPage()
+loadPage()
