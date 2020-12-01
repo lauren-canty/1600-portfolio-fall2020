@@ -65,16 +65,43 @@ function populateCardBack(pokemon) {
     cardBack.className='card__face card__face--back'
     let backLabel = document.createElement('p')
     backLabel.textContent = `I'm the back of the card`
-    cardBack.appendChild (backLabel)
-    return cardBack
+    pokemon.abilities.forEach(ability => {
+        let abilityName = document.createElement('li')
+        abilityName.textContent = ability.ability.name
+        abilityList.appendChild(abilityName)
+    })
+    let movesLabel = document.createElement('h3')
+    movesLabel.textContent='Most Accurate Move:'
+    let moveAccuracy = document.createElement('h4')
+    const mostAccurateMove = getBestAccuracy(pokemon.moves)
 
+    moveAccuracy.textContent = `${mostAccurateMove.move.name}`
+    cardBack.appendChild (backLabel)
+    cardBack.appendChild(abilityList)
+    cardBack.appendChild(movesLabel)
+    cardBack.appendChild(moveAccuracy)
+    return cardBack
 }
 
+function getBestAccuracy (pokemoves){
+    return pokemoves.reduce((mostAccurate,move)=>{
+        getAPIData(move.url).then
+        (async(data)=>{
+            console.log(data.accuracy, data.power)
+        })
+        return mostAccurate.accuracy > move.accuracy ? mostAccurate : move;
+
+    },{});
+}
 function getImageFileName(pokemon){
     if (pokemon.id<10) {
         return `00${pokemon.id}`
     } else if (pokemon.id > 9 && pokemon.id<99) {
         return `0${pokemon.id}`
     }
+}
+
+function Pokemon(name, height, weight, abilities){
+
 }
 loadPage()
