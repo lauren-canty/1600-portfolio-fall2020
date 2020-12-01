@@ -53,7 +53,7 @@ function populateCardFront(pokemon){
     let frontLabel = document.createElement('p')
     let frontImage = document.createElement('img')
     frontLabel.textContent = pokemon.name
-    frontImage.src = `../images/pokemon/00${pokemon}.png`
+    frontImage.src = `../images/pokemon/00${pokemon.id}.png`
     cardFront.appendChild(frontImage)  
     cardFront.appendChild(frontLabel)
     return  cardFront
