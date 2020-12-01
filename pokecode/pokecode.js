@@ -14,10 +14,10 @@ async function getAPIData(url) {
 function loadPage() {
     getAPIData (`https://pokeapi.co/api/v2/pokemon`).then
         (async (data) => {
-        for (const pokemon of data.results) {
-            await getAPIData(pokemon.url).then((pokeData)=>{
-                console.log(pokeData)
-                populatePokeCard(pokeData)
+            for (const pokemon of data.results) {
+                await getAPIData(pokemon.url).then((pokeData)=>{
+                    console.log(pokeData)
+                    populatePokeCard(pokeData)
             })
         }
     })
@@ -44,7 +44,7 @@ function populatePokeCard(pokemon){
     pokeCard.appendChild(populateCardFront(pokemon))
     pokeCard.appendChild(populateCardBack(pokemon))
     pokeScene.appendChild(pokeCard)
-    pokemonGrid.appenfChild(pokeScene)
+    pokemonGrid.appendChild(pokeScene)
 }
 
 function populateCardFront(pokemon){
