@@ -16,7 +16,6 @@ function loadPage() {
         (async (data) => {
             for (const pokemon of data.results) {
                 await getAPIData(pokemon.url).then((pokeData)=>{
-                    console.log(pokeData)
                     populatePokeCard(pokeData)
             })
         }
@@ -24,7 +23,7 @@ function loadPage() {
 }
 
 const pokemonGrid = document.querySelector('.pokemonGrid')
-const mudsDaleButton = document.querySelector('button')
+///const mudsDaleButton = document.querySelector('button')
 ///mudsDaleButton.addEventListener('click', () => {
    /// getAPIData(`https://pokeapi.co/api/v2/pokemon`)
 ///})
@@ -37,7 +36,7 @@ function populatePokeCard(pokemon){
     let pokeCard = document.createElement('div')
     pokeCard.className = 'card'
     pokeCard.addEventListener('click', () =>{
-        console.log('You Clicked on ${pokemon.name}')
+       pokeCard.classList.toggle('is-flipped')
     })
    
    
@@ -65,6 +64,7 @@ function populateCardBack(pokemon) {
     cardBack.className='card__face card__face--back'
     let backLabel = document.createElement('p')
     backLabel.textContent = `I'm the back of the card`
+    let abilityList = document.createElement('ul')
     pokemon.abilities.forEach(ability => {
         let abilityName = document.createElement('li')
         abilityName.textContent = ability.ability.name
@@ -102,6 +102,15 @@ function getImageFileName(pokemon){
 }
 
 function Pokemon(name, height, weight, abilities){
-
+    this.name= name
+    this.height = height
+    this.weight = weight
+    this.abilities = abilities
+    this.id = 900
 }
+
+let lauremon = new Pokemon('Lauremon',450,200,['fire-breathing','sleep'])
+console.log(lauremon)
+
+
 loadPage()
