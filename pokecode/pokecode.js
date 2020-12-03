@@ -52,7 +52,7 @@ function populateCardFront(pokemon){
     let frontLabel = document.createElement('p')
     let frontImage = document.createElement('img')
     frontLabel.textContent = pokemon.name
-    frontImage.src = `../images/pokemon/00${getImageFileName(pokemon)}.png`
+    frontImage.src = `../images/pokemon/${getImageFileName(pokemon)}.png`
     cardFront.appendChild(frontImage)  
     cardFront.appendChild(frontLabel)
     return  cardFront
@@ -63,7 +63,7 @@ function populateCardBack(pokemon) {
     let cardBack = document.createElement('div')
     cardBack.className='card__face card__face--back'
     let backLabel = document.createElement('p')
-    backLabel.textContent = `I'm the back of the card`
+    backLabel.textContent = `Abilities`
     let abilityList = document.createElement('ul')
     pokemon.abilities.forEach(ability => {
         let abilityName = document.createElement('li')
@@ -84,7 +84,7 @@ function populateCardBack(pokemon) {
 }
 
 function getBestAccuracy (pokemoves){
-    return pokemoves.reduce((mostAccurate,move)=>{
+    return pokemoves.reduce((mostAccurate, move)=>{
         getAPIData(move.url).then
         (async(data)=>{
             console.log(data.accuracy, data.power)

@@ -35,10 +35,10 @@
     backface-visibility: hidden;
   }
 .card__face--front {
-    background: red;
+    background: navy;
   }
   
 .card__face--back {
-    background: blue;
+    background: yellow;
     transform: rotateY(180deg);
   }
