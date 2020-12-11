@@ -23,6 +23,12 @@ function loadPage() {
 }
 
 const pokemonGrid = document.querySelector('.pokemonGrid')
+const loadButton = document.querySelector('button')
+
+loadButton.addEventListener('click', () => {
+    loadPage()
+    loadButton.disabled = true
+})
 ///const mudsDaleButton = document.querySelector('button')
 ///mudsDaleButton.addEventListener('click', () => {
    /// getAPIData(`https://pokeapi.co/api/v2/pokemon`)
