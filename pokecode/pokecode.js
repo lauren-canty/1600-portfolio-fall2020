@@ -5,7 +5,7 @@ async function getAPIData(url) {
         const data = await response.json()
         return data
     } catch (error){
-        console.error(error)
+        ///console.error(error)
 
     }
 }
@@ -23,13 +23,20 @@ function loadPage() {
 }
 
 const pokemonGrid = document.querySelector('.pokemonGrid')
+const newButton = document.querySelector('#newPokemon')
 const loadButton = document.querySelector('button')
 
 loadButton.addEventListener('click', () => {
-    loadPage()
-    loadButton.hidden = true
+  loadPage()
+  loadButton.disabled = true
 
 })
+
+newButton.addEventListener('click', () => {
+    let pokeName = prompt("What's your new Pokemon's name?");
+    populatePokeCard(createNewPokemon(pokeName))
+})
+
 
 ///const mudsDaleButton = document.querySelector('button')
 ///mudsDaleButton.addEventListener('click', () => {
@@ -95,7 +102,7 @@ function getBestAccuracy (pokemoves){
     return pokemoves.reduce((mostAccurate, move)=>{
         getAPIData(move.url).then
         (async(data)=>{
-            console.log(data.accuracy, data.power)
+            ///console.log(data.accuracy, data.power)
         })
         return mostAccurate.accuracy > move.accuracy ? mostAccurate : move;
 
@@ -109,16 +116,14 @@ function getImageFileName(pokemon){
     }
 }
 
-function Pokemon(name, height, weight, abilities){
+function Pokemon(name, height, weight, abilities, moves){
     this.name= name
     this.height = height
     this.weight = weight
     this.abilities = abilities
     this.id = 900
+    this.moves = moves
 }
-
-let lauremon = new Pokemon('Lauremon',450,200,['fire-breathing','sleep'])
-console.log(lauremon)
-
-
-loadPage()
+function createNewPokemon(name){
+    return new Pokemon(name,450,200,['fire-breathing','sleep'],['thunder','crying'])
+}

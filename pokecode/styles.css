@@ -7,12 +7,10 @@
 }
 h1{
   font-size: 900;
-  
   font-weight: bold;
   text-align: center;
-  text-shadow: #CCC;
-  text-decoration: blue;
-  
+  text-shadow:blue;
+  color: black;
 
 }
 body{
