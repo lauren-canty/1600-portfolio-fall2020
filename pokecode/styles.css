@@ -1,32 +1,54 @@
 *{
-    margin:0;
+
     box-sizing: border-box;
     flex-wrap: wrap;
-    justify-content: center;
-    
+}
+button {
+  justify-content: center;
+  background-color:yellow;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border-radius: 3rem;
+
+}
+.container{
+  flex-direction: column;
+  justify-content: center;
+
 }
 h1{
-  font-size: 900;
+  font-size: 42px;
   font-weight: bold;
   text-align: center;
   text-shadow:blue;
   color: black;
-
+  border: white;
+  background-color: white;
+  padding: 20px;
 }
 body{
   background-image: url(pokemon\ wallpaper.jpg);
+  margin:30px;
 }
 
 .pokemonGrid {
     display: flex;
     flex-wrap: wrap;
+    justify-content:space-around;
+    justify-content: space-evenly;
     justify-content: space-between;
+    padding: 40px;
 }
 .scene {
     width: 200px;
     height: 260px;
     border: 1px solid#CCC;
-    margin: 10px 0;
+    margin: 10px 30px;
     perspective: 600px;
 
 }
@@ -56,3 +78,18 @@ body{
     background: yellow;
     transform: rotateY(180deg);
   }
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  width: 50%;
+
+    
+  }
+p{
+  font-size: 25px;
+  font-style: oblique;
+  font-weight: bolder;
+  text-align: center;
+}
