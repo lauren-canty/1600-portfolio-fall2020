@@ -12,7 +12,7 @@ async function getAPIData(url) {
 
 // now, use the async get SPIData function
 function loadPage() {
-    getAPIData (`https://pokeapi.co/api/v2/pokemon`).then
+    getAPIData (`https://pokeapi.co/api/v2/pokemon?limit=25`).then
         (async (data) => {
             for (const pokemon of data.results) {
                 await getAPIData(pokemon.url).then((pokeData)=>{
@@ -27,8 +27,10 @@ const loadButton = document.querySelector('button')
 
 loadButton.addEventListener('click', () => {
     loadPage()
-    loadButton.disabled = true
+    loadButton.hidden = true
+
 })
+
 ///const mudsDaleButton = document.querySelector('button')
 ///mudsDaleButton.addEventListener('click', () => {
    /// getAPIData(`https://pokeapi.co/api/v2/pokemon`)
@@ -102,7 +104,7 @@ function getBestAccuracy (pokemoves){
 function getImageFileName(pokemon){
     if (pokemon.id<10) {
         return `00${pokemon.id}`
-    } else if (pokemon.id > 9 && pokemon.id<99) {
+    } else if (pokemon.id > 9 && pokemon.id < 99) {
         return `0${pokemon.id}`
     }
 }
