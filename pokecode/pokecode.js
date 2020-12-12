@@ -37,14 +37,6 @@ newButton.addEventListener('click', () => {
     populatePokeCard(createNewPokemon(pokeName))
 })
 
-
-///const mudsDaleButton = document.querySelector('button')
-///mudsDaleButton.addEventListener('click', () => {
-   /// getAPIData(`https://pokeapi.co/api/v2/pokemon`)
-///})
-
-///let pokemonGrid = document.querySelector('.pokemonGrid')
-
 function populatePokeCard(pokemon){
     let pokeScene = document.createElement('div')
     pokeScene.className = 'scene'
